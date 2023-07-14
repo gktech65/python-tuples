@@ -1,0 +1,92 @@
+(1)
+#Write a Python program to pack and unpack tuples
+x =(2,3,5,7,11,13)
+t1,*t2 =x
+print(t1)
+print(t2)
+
+(2)
+#Write a Python program to swap two numbers using tuple
+x=input()
+y=input()
+print(x,y)
+(x,y)=(y,x)
+print(x,y)
+
+(3)
+# Write a python program to concatenate two tuples
+T=(1,2,3)
+T1= (4,5,6)
+print(T+T1)
+
+(4)
+#Write a Python program to read and print values of tuples from console I/O
+lst = []
+val=int(input("enter number of elements"))
+t=()
+for i in range(0,val):
+  ele = (input())
+  lst.append(ele)
+  tupl=tuple(lst)
+print(tupl)
+
+(5)
+# Write a python program to convert a tuple into a string
+t=('a','b','c')
+str=""
+for i in t:
+  str = str+i
+print(str)
+
+(6)
+#Write a python program to search a particular element in a tuple
+t = ("a", 3, "b", "c", "d", "e")
+print("r" in t)
+print(5 in t)
+
+(7)
+# Write a python program to print the sum of all elements of a tuple
+x =(1,2,3,4,5)
+r = sum(list(x))
+print("Sum is ",r)
+
+(8)
+#Write a python program to print the sorted order of a tuple
+x = ('c', 'a', 'd', 'b')
+s=sorted(x)
+n=tuple(s)  
+print (n)
+
+(9)
+# Write a python program to find duplicate elements in an input tuple
+t=(2,4,6,55,3,6,22,5)
+r =[]
+for i in t:
+  found = 0
+  for j in r:
+    if(j[0]==i):
+     j[1] +=1
+     found = 1
+     break
+  if(not found):
+    r.append([i,1])
+num = 0
+count = 0
+for i in r:
+  if(i[1]>count):
+    count =i[1]
+    num = i[0]
+if (count >1):
+ print("Repeated number:" +str(num)+" ""\nRepeated times:" +str(count))
+else:
+  print("No number repeated")
+
+(10)
+#Create a tuple with 20 numbers. Write a python program to print another tuple whose values are even numbers from the first tuple
+t =(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
+l = []
+for i in range(len(t)):
+  if int(t[i])%2 == 0:
+     l.append(t[i])
+t1 = tuple(l)
+print(t1)
